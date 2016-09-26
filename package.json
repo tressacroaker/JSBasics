@@ -1,0 +1,23 @@
+{
+  "name": "jsbasics",
+  "version": "1.0.0",
+  "description": "Introduction to basic Javascript Functions",
+  "main": "basics.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Montana-Code-School/JSBasics.git"
+  },
+  "author": "Nick Marucci",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Montana-Code-School/JSBasics/issues"
+  },
+  "homepage": "https://github.com/Montana-Code-School/JSBasics#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.2"
+  }
+}
