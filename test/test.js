@@ -21,7 +21,7 @@ describe('Basic JS Exercises', function () {
   })
 
   describe('Array Exercise 2 - findTwo', function () {
-    it('should return the second number of an array', function () {
+    it('should return the second index of an array', function () {
       var arr = [1, 2, 3]
       expect(basics.findTwo(arr)).to.eql(3)
     })
@@ -69,7 +69,7 @@ describe('Basic JS Exercises', function () {
     it('should insert the two numbers into the array after the second index value and delete the third index value', function () {
       var arr = [1,2,3,4,5]
       var chopItArr = basics.chopIt(arr, 6, 7)
-      expect(chopItArr.length).to.eql(5)
+      expect(chopItArr.length).to.eql(6)
       expect(chopItArr[3]).to.eql(6)
       expect(chopItArr[4]).to.eql(7)
       expect(chopItArr[5]).to.eql(5)
@@ -96,7 +96,7 @@ describe('Basic JS Exercises', function () {
   })
 
   describe('Array Exercise 10 - timesTen', function () {
-    it('', function () {
+    it('Should return a new array where each value is multiplied by ten', function () {
       var arr = [1, 2, 3]
       var timesTenArr = basics.timesTen(arr)
       expect(timesTenArr.length).to.eql(3)
@@ -108,19 +108,19 @@ describe('Basic JS Exercises', function () {
 
   describe('Object Exercise 1 - animal', function () {
     it('Should have the appropriate keys', function () {
-      expect(basics.animal.species).to.be.ok()
-      expect(basics.animal.name).to.be.ok()
-      expect(basics.animal.age).to.be.ok()
-      expect(basics.animal.gender).to.be.ok()
-      expect(basics.animal.favoriteFood).to.be.ok()
+      expect(basics.animal.species).to.not.eql(undefined)
+      expect(basics.animal.name).to.not.eql(undefined)
+      expect(basics.animal.age).to.not.eql(undefined)
+      expect(basics.animal.gender).to.not.eql(undefined)
+      expect(basics.animal.favoriteFood).to.not.eql(undefined)
     })
-    it('should have a speech method that returns a string', function () {
+    it('Dhould have a speech method that returns a string', function () {
       expect(basics.animal.speech()).to.be.a('string')
     })
   })
 
   describe('Object Exercise 2 - findAge', function () {
-    it('', function () {
+    it('should return the age value', function () {
       var age = basics.findAge({age: 10})
       expect(age).to.eql(10)
     })
@@ -168,10 +168,44 @@ describe('Basic JS Exercises', function () {
   })
 
   describe('Intermediate Exercise 1 - cars', function () {
-    it('', function () {})
+    it('should be an array of length 3', function () {
+      expect(basics.cars.length).to.eql(3)
+    })
+    it('should have valid key value pairs for all 3 car objects',function(){
+      expect(basics.cars[0].make).to.not.eql(undefined)
+      expect(basics.cars[0].model).to.not.eql(undefined)
+      expect(basics.cars[0].year).to.not.eql(undefined)
+      expect(basics.cars[1].make).to.not.eql(undefined)
+      expect(basics.cars[1].model).to.not.eql(undefined)
+      expect(basics.cars[1].year).to.not.eql(undefined)
+      expect(basics.cars[2].make).to.not.eql(undefined)
+      expect(basics.cars[2].model).to.not.eql(undefined)
+      expect(basics.cars[2].year).to.not.eql(undefined)
+    })
   })
 
   describe('Intermediate Exercise 2 - findModels', function () {
-    it('', function () {})
+    it('should be an array of length 3', function () {
+      expect(basics.findModels(arr)).to.eql(3)
+    })
+    it('should return an array of the model values', function () {
+      var arr = [{
+          make: "Chevy",
+          model: "Corvette",
+          year: 2015
+        },{
+          make: "Honda",
+          model: "Civic",
+          year: 1980
+        },{
+          make: "Ford",
+          model: "F-150",
+          year: 2010
+        }
+      ];
+      expect(basics.findModels(arr)[0]).to.eql("Corvette")
+      expect(basics.findModels(arr)[1]).to.eql("Civic")
+      expect(basics.findModels(arr)[2]).to.eql("F-150")
+    })
   })
 })
