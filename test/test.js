@@ -158,11 +158,11 @@ describe('Basic JS Exercises', function () {
 
   describe('Object Exercise 7 - keyLoop', function () {
     it("should report if there's a monkey key in the object", function () {
-      var obj = { monkey: true }
+      var obj = { animal: "monkey" }
       expect(basics.keyLoop(obj)).to.eql("There's a monkey!")
     })
     it("should report if there's not a monkey key in the object", function () {
-      var obj = { notMonkey: true }
+      var obj = { animal: "python" }
       expect(basics.keyLoop(obj)).to.eql("There's no monkey here!")
     })
   })

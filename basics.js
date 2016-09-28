@@ -117,19 +117,30 @@ var changeName = function (object, newName) {
 
 // 5. Create a function called speechMaker that takes in an object and returns the response from calling the speech method.
 
-var speechMaker = {speech: "response"};
-return speech;
+var speechMaker = function(obj){
+  return obj.speech();
+};
 
 // 6. Create a function called addKey that takes in an object and adds a new key name bedtime and assigns it a value. Return the object.
 
 var addKey = function (object) {
-  var object = {
-    bedtime: 8
-  };
+
+  object.bedtime = "10pm";
   return object;
 };
 
 // 7. Create a function called keyLoop that takes in an object and loops through each of the key values. If any of the key values are equal to "monkey", then return "There's a monkey!", otherwise return "There's no monkey here!".
+
+var keyLoop = function(obj){
+  var message = "There's no monkey here!";
+  for (var key in obj){
+    if(obj[key] == "monkey"){
+      message = "There's a monkey!";
+    }
+  }
+  return message;
+};
+
 
 // Intermediate Arrays and Objects
 
